@@ -10,8 +10,6 @@ subpower$Time <- strptime(subpower$Time, format="%H:%M:%S")
 subpower[1:1440,"Time"] <- format(subpower[1:1440,"Time"],"2007-02-01 %H:%M:%S")
 subpower[1441:2880,"Time"] <- format(subpower[1441:2880,"Time"],"2007-02-02 %H:%M:%S")
 
-# plotting graph with width and height as 480
-png("plot3.png", width=480, height=480) 
 
 # calling the basic plot functions
 plot(subpower$Time,subpower$Sub_metering_1,type="n",xlab="",ylab="Energy sub metering")
@@ -22,4 +20,6 @@ legend("topright", lty=1, col=c("black","red","blue"),legend=c("Sub_metering_1",
 
 # annotating graph for Energy Sub-Metering 
 title(main="Energy sub-metering")
+# plotting graph with width and height as 480
+png("plot3.png", width=480, height=480) 
 dev.off()
