@@ -16,3 +16,5 @@ plot(subpower$Time,as.numeric(as.character(subpower$Global_active_power)),type="
 
 # annotating graph for Active Power Vs Time
 title(main="Global Active Power Vs Time")
+png("plot2.png", width=480, height=480)
+dev.off()
