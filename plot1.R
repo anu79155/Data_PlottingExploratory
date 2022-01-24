@@ -11,3 +11,7 @@ hist(as.numeric(as.character(subpower$Global_active_power)),col="red",main="Glob
 
 # annotating graph to plot global active power
 title(main="Global Active Power")
+
+# plotting graph with width and height as 480
+png("plot1.png", width=480, height=480)
+dev.off()
